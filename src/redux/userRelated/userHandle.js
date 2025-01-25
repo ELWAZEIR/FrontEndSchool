@@ -17,7 +17,7 @@ export const loginUser = (fields, role) => async (dispatch) => {
     dispatch(authRequest());
 
     try {
-        const result = await axios.post(`http://localhost:5000/${role}Login`, fields, {
+        const result = await axios.post(`https://school-git-main-3la-allah.vercel.app/${role}Login`, fields, {
             headers: { 'Content-Type': 'application/json' },
         });
         if (result.data.role) {
