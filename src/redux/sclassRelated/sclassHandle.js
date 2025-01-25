@@ -51,7 +51,7 @@ export const getClassDetails = (id, address) => async (dispatch) => {
 
     
     try {
-        const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/Sclass/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/Sclass/${id}`);
         if (result.data) {
             dispatch(detailsSuccess(result.data));
         }
@@ -64,7 +64,7 @@ export const getSubjectList = (id, address) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/AllSubjects/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/AllSubjects/${id}`);
         if (result.data.message) {
             dispatch(getFailed(result.data.message));
         } else {
@@ -79,7 +79,7 @@ export const getTeacherFreeClassSubjects = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/FreeSubjectList/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/FreeSubjectList/${id}`);
         if (result.data.message) {
             dispatch(getFailed(result.data.message));
         } else {
@@ -94,7 +94,7 @@ export const getSubjectDetails = (id, address) => async (dispatch) => {
     dispatch(getSubDetailsRequest());
 
     try {
-        const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/${address}/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/${address}/${id}`);
         if (result.data) {
             dispatch(getSubDetailsSuccess(result.data));
         }
