@@ -11,7 +11,7 @@ export const getAllStudents = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/Students/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/Students/${id}`);
         // console.log(result,"student result ");
         
         if (result.data.message) {
@@ -28,7 +28,7 @@ export const getStudentsNum = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/StudentsCount`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/StudentsCount`);
         // console.log(result,"student num result ");
         // console.log(result.data);
         

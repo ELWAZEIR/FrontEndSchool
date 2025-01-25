@@ -13,7 +13,7 @@ export const getAllTeachers = (id) => async (dispatch) => {
     console.log("fetch techer");
     
     try {
-        const result = await axios.get(`http://localhost:5000/Teachers/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/Teachers/${id}`);
         if (result.data.message) {
             dispatch(getFailed(result.data.message));
         } else {

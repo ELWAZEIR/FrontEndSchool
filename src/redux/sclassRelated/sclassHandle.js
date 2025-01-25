@@ -16,7 +16,7 @@ export const getAllSclasses = (id, address) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/SclassList/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/SclassList/${id}`);
         // console.log(result,"getAllSclasses");
         
         if (result.data.message) {
@@ -33,7 +33,7 @@ export const getClassStudents = (id) => async (dispatch) => {
     dispatch(getRequest());
 
     try {
-        const result = await axios.get(`http://localhost:5000/Students/${id}`);
+        const result = await axios.get(`https://school-git-main-3la-allah.vercel.app/Students/${id}`);
 
         if (result.data.message) {
             dispatch(getFailedTwo(result.data.message));
